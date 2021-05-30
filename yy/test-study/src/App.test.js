@@ -7,7 +7,7 @@ jest.mock('axios');
 
 describe('App', () => {
   test('App 렌더링', () => {
-    render(<App />);
-    screen.getByText('app');
+    const { getByText } = render(<App />);
+    getByText('todo');
   });
 });
