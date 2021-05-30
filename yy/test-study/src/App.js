@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TodoList from './Components/TodoList';
-
-const todos = [
-  { id: 1, content: '잠 자기' },
-  { id: 2, content: '테스트 코드 공부하기' },
-];
+import Editor from './Components/Editor';
 
 function App() {
+  const [todos, setTodos] = useState([]);
   return (
     <div className="app">
-      <span>todo</span>
+      <h1>todo</h1>
       <TodoList todos={todos} />
+      <Editor />
     </div>
   );
 }

@@ -7,7 +7,7 @@ function TodoList({ todos }) {
     });
   };
 
-  return <ul>{todos.length > 0 ? renderTodos() : 'empty'}</ul>;
+  return <div>{todos.length > 0 ? <ul>{renderTodos()}</ul> : 'empty'}</div>;
 }
 
 export default TodoList;

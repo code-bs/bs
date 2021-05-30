@@ -3,8 +3,6 @@ import { render } from '@testing-library/react';
 import TodoList from '.';
 import { todos } from '../../../fixtures';
 
-jest.mock('axios');
-
 describe('TodoList', () => {
   test('todos가 존재할 때 TodoList 렌더링', () => {
     const { queryAllByRole } = render(<TodoList todos={todos} />);
